@@ -42,7 +42,7 @@
             {% capture _category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
             <li class="ms-4 nav-item{% if page.url == _category_url %}{{ " active" }}{% endif %}">
               <a href="{{ _category_url | relative_url }}" class="nav-link">
-                  <i class="far fa-folder fa-fw"></i>
+                  <i class="far {% if page.url == _category_url %}fa-folder-open {% else %}fa-folder fa-fw {% endif %}"></i>
                   <span>{{ category_name }}</span>
               </a>
             </li>
