@@ -13,9 +13,13 @@ resource_hints:
     links:
       - rel: preconnect
       - rel: dns-prefetch
+  - url: https://cdn.cre.cat
+    links:
+      - rel: preconnect
+      - rel: dns-prefetch
 
 # Web Fonts
-webfonts: https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
+webfonts: https://cdn.cre.cat/fonts/dvpznefd/fonts.css
 
 # Libraries
 

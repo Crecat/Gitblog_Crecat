@@ -26,25 +26,29 @@
         </a>
       </li>
 
-      <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}"></li>
-        <a href="{{ '/' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
+      <li class="nav-item{% if page.layout == 'categories' %}{{ " inactive" }}{% endif %}">
+        <a href="{{ '#' | relative_url }}" class="nav-link no-action">
+          <i class="fa-fw fas fa-stream"></i>
+          <span>{{ site.data.locales[include.lang].tabs.categories | upcase }}</span>
         </a>
       </li>
 
-      <!-- the real tabs -->
-      {% for tab in site.tabs %}
-        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-          <a href="{{ tab.url | relative_url }}" class="nav-link">
-            <i class="fa-fw {{ tab.icon }}"></i>
-            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-
-            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
+      {% assign sorted_categories = site.categories | sort %}
+      {% for category in sorted_categories %}
+        {% assign category_name = category | first %}
+        {% assign posts_of_category = category | last %}
+        {% assign first_post = posts_of_category | first %}
+          {% if category_name == first_post.categories[0] %}
+            {% capture _category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
+            <li class="ms-4 nav-item{% if page.url == _category_url %}{{ " active" }}{% endif %}">
+              <a href="{{ _category_url | relative_url }}" class="nav-link">
+                  <i class="far fa-folder fa-fw"></i>
+                  <span>{{ category_name }}</span>
+              </a>
+            </li>
+          {% endif %}
       {% endfor %}
+
     </ul>
   </nav>
 
