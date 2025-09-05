@@ -5,12 +5,11 @@ export default {
       2,
       'always',
       [
-        'add-post',
-        'remove-post',
-        'update-post',
-        'upgrade-dependency',
-        'fix-blog-system',
-        'upgrade-blog-system'
+        'add',
+        'remove',
+        'update',
+        'fix',
+        'upgrade'
       ]
     ]
   }
