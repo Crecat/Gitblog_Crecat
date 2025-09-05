@@ -1,6 +1,7 @@
 ---
 title: What is .cat Domain?
 date: 2025-09-05 14:44:00 +09:00
+author: bjkim
 categories: []
 tags: []
 hidden: true
