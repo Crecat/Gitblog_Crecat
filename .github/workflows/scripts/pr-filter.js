@@ -1,11 +1,11 @@
 function hasTypes(markdown) {
-  return /## Type of change/.test(markdown) && /-\s\[x\]/i.test(markdown);
+  return /## 다음의 변경 포함/.test(markdown) && /-\s\[x\]/i.test(markdown);
 }
 
 function hasDescription(markdown) {
   return (
-    /## Description/.test(markdown) &&
-    !/## Description\s*\n\s*(##|\s*$)/.test(markdown)
+    /## 개요/.test(markdown) &&
+    !/## 개요\s*\n\s*(##|\s*$)/.test(markdown)
   );
 }
 

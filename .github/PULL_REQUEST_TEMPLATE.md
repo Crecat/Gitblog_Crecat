@@ -1,17 +1,13 @@
-## Type of change
-<!-- Please select the desired item checkbox and change it from `[ ]` to `[x]` and then delete the irrelevant options. -->
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Improvement (refactoring and improving code)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
+## 다음의 변경 포함
+<!-- 포함된 PR 내용에 [x]로 표기해주세요. -->
+- [ ] ➕ Add-post (포스트가 추가되었어요.)
+- [ ] ➖ Remove-post (포스트가 삭제되었어요.)
+- [ ] 🔨 Update-post (포스트의 내용이 업데이트 되었어요.)
+- [ ] ⬆️ Upgrade-dependency (블로그 구성과 관련한 의존성이 업데이트 되었어요.)
+- [ ] 🚧 Fix-blog-system (블로그 자체의 문제점이 수정되었어요.)
+- [ ] 🔧 Upgrade-blog-system (블로그에 기능을 추가/수정했어요.)
 
-## Description
-<!--
-  Please include a summary of the change and which issue is fixed. 
-  Please also include relevant motivation and context. 
-  List any dependencies that are required for this change.
--->
+<br>
 
-## Additional context
-<!-- e.g. Fixes #(issue) -->
+## 개요
+<!-- 상세한 변경점을 알려주세요. -->
