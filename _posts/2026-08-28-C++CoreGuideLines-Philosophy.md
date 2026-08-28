@@ -1,68 +1,20 @@
-
 ---
-
-title: C++ Core GuideLines-Philosophy
-
-date: 2026-08-28 12:11:00 +09:00
-
-author: bjkim
-
-categories: [C++ Core GuideLines]
-
-tags: [C++, C++ Core GuideLines]
-
-description: "C++ Core Guidelines 중 Philosophy 섹션을 한글로 정리."
-
+title: C++ Core Guidelines-Philosophy
+categories:
+- C++CoreGuideLines
+tags:
+- C++
+- C++CoreGuideLines
+description: C++ Core Guidelines-Philosophy
 hidden: false
-
+date: '2026-08-28 12:33:51'
 ---
 
-C++ Core GuideLines - Philosophy
-
-> :bulb: *해당 문서는 [C++ Core GuideLines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)의 개인적인 이해를 돕기위해 만든 문서입니다.*
+> 💡 *해당 문서는 [C++ Core GuideLines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)의 개인적인 이해를 돕기위해 만든 문서입니다.*
 > 
-> *오류 지적은 언제든 환영입니다. 읽어주셔서 감사합니다* :relaxed:
-
-<br><br><br>
+> *오류 지적은 언제든 환영입니다. 읽어주셔서 감사합니다* ☺️
 
 ---
-
-## 목차
-
-[[#P.1 코드의 목적을 온전히 코드로만 설명할 수 있게 하세요.]]
-- [[#되도록 주석이 필요없는 코드를 작성하세요.]]
-- [[#표준 라이브러리를 적극 활용하세요.]]
-- [[#의미있는 타입을 사용하세요.]]
-
-[[#P.2 코드를 ISO 표준 C++ 코드로 작성할 수 있도록 하세요.]]
-
-[[#P.3 코드의 동작에 대한 의사를 명확히 표현하세요.]]
-
-[[#P.4 정적 타입 안전성을 최대한 확보하세요.]]
-
-[[#P.5 런타임 시간 검사 대신 컴파일 시간 검사를 선호하세요.]]
-
-[[#P.6 컴파일 시간에 검사하지 못한 내용은 런타임에 검사하세요.]]
-
-[[#P.7 런타임 오류를 조기에 확인할 수 있게 하세요.]]
-- [[#인지할 수 없는 문제가 발생하지 않도록 하세요.]]
-- [[#같은 값을 반복해서 검사하지 말고, 한 번 타입이 검증되었다면 해당 타입을 참조하세요.]]
-- [[#과도한 검사는 쓸데없이 많은 비용을 발생시키거나, 클래스를 사용할 수 없게 만들 수 있습니다.]]
-
-[[#P.8 어떠한 자원이든 누수되는걸 방지하세요.]]
-
-[[#P.9 시간과 공간을 낭비하지 마세요.]]
-- [[#증가 전 값이 필요할 경우에만 후위 증감 연산자를 사용하세요.]]
-
-[[#P.10 반드시 불변 데이터를 먼저 사용하세요.]]
-
-[[#P.11 복잡한 구조는 캡슐화 할 수 있도록 하세요.]]
-
-[[#P.12 필요에 따라 보조 도구를 적극적으로 활용하세요.]]
-
----
-
-<br><br><br>
 
 <br>
 
@@ -334,7 +286,7 @@ const auto length = gsl::narrow_cast<std::uint16_t>(payloadLength); //#2
 이 경우, `gsl::narrow`를 사용해보는걸 검토해보세요.
 변환 과정에서 손실이 발생했는지 확인하고, 값 손실이 발생하지 않았다면 그대로 변환하고 그렇지 않다면 예외를 발생시킵니다.
 
-> :bulb: *C++ Core GuideLines에서는 가이드라인 준수를 위해 GSL이라는 헤더를 제공하고 있습니다. 이후 GSL 부문에서 따로 다룰 예정이지만, [GSL 깃허브 페이지](https://github.com/microsoft/GSL/tree/main)를확인해보세요.*
+> 💡 *C++ Core GuideLines에서는 가이드라인 준수를 위해 GSL이라는 헤더를 제공하고 있습니다. 이후 GSL 부문에서 따로 다룰 예정이지만, [GSL 깃허브 페이지](https://github.com/microsoft/GSL/tree/main)를확인해보세요.*
 
 `gsl::narrow_cast`는 `std::static_cast`와 그 기능이 동일합니다.
 
