@@ -71,6 +71,12 @@ code {
   hyphens: none;
   color: var(--code-color);
 
+  &.language-plaintext {
+    &.highlighter-rouge {
+      font-family: v.$font-family-base;
+    }
+  }
+
   &.highlighter-rouge {
     font-size: v.$code-font-size;
     padding: 3px 5px;
