@@ -1,3 +1,22 @@
+
+---
+
+title: C++ Core GuideLines-Philosophy
+
+date: 2026-08-28 12:11:00 +09:00
+
+author: bjkim
+
+categories: [C++ Core GuideLines]
+
+tags: [C++, C++ Core GuideLines]
+
+description: "C++ Core Guidelines 중 Philosophy 섹션을 한글로 정리."
+
+hidden: false
+
+---
+
 C++ Core GuideLines - Philosophy
 
 > :bulb: *해당 문서는 [C++ Core GuideLines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)의 개인적인 이해를 돕기위해 만든 문서입니다.*
